@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Focus Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <!-- Load face-api.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    
+    <!-- Load our modular JavaScript -->
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    <div class="background"></div>
+
+    <!-- Custom Notification Element -->
+    <div id="notification" class="notification"></div>
+
+    <div class="main-container">
+        <!-- Progress Ring SVG -->
+        <div class="progress-ring-container">
+            <svg id="progress-ring" class="progress-ring" width="220" height="220">
+                <circle class="progress-ring__track" cx="110" cy="110" r="100"/>
+                <circle class="progress-ring__indicator" cx="110" cy="110" r="100"/>
+            </svg>
+            <div class="timer-display">25:00</div>
+        </div>
+        
+        <!-- Task Input -->
+        <div class="task-container">
+            <label for="task-input">Current Task:</label>
+            <input type="text" id="task-input" placeholder="What are you working on?">
+        </div>
+        
+        <div class="camera-container">
+            <video id="video" width="400" height="225" autoplay muted playsinline></video>
+            <div id="status-text">Loading Models...</div>
+        </div>
+
+        <div class="settings-container">
+            <div><label>Work (min):</label><input type="number" id="work-minutes" value="25"></div>
+            <div><label>Short Break (min):</label><input type="number" id="short-break-minutes" value="5"></div>
+            <div><label>Long Break (min):</label><input type="number" id="long-break-minutes" value="15"></div>
+            <div><label>Rounds:</label><input type="number" id="rounds" value="4"></div>
+        </div>
+        
+        <div class="button-container">
+            <button id="start-btn" class="btn start">Start</button>
+            <button id="pause-btn" class="btn pause" disabled>Pause</button>
+            <button id="reset-btn" class="btn reset" disabled>Reset</button>
+        </div>
+
+        <button id="stats-btn" class="btn stats">View Stats</button>
+    </div>
+
+    <!-- Statistics Modal -->
+    <div id="stats-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Productivity Log</h2>
+            <div id="stats-content"></div>
+        </div>
+    </div>
+</body>
+</html>```
+
