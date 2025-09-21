@@ -1,0 +1,21 @@
+/pomo_web_app
+|
+|-- index.html         (The main HTML file, updated with new elements)
+|-- style.css          (The single CSS file, updated with new styles)
+|
+|-- /js                (A NEW folder for all JavaScript)
+|   |-- main.js        (The main entry point that connects everything)
+|   |-- ui.js          (Controls all UI updates: timer, buttons, progress ring)
+|   |-- timer.js       (Manages all timer logic: start, pause, countdown)
+|   |-- camera.js      (Handles face detection and camera logic)
+|   |-- state.js       (Manages saving/loading the app's state to localStorage)
+|   |-- notifications.js (Controls the new custom notifications)
+|
+|-- /assets            (Your existing assets folder)
+|   |-- background.jpg
+|   |-- favicon.png
+|   |-- work_end.wav
+|   |-- break_end.wav
+|
+|-- /models            (Your existing models folder)
+    |-- ... (all the AI model files)
